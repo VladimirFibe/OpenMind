@@ -12,6 +12,7 @@
 		E8F89BB32A56800A000878F0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F89BB22A56800A000878F0 /* ContentView.swift */; };
 		E8F89BB52A56800C000878F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8F89BB42A56800C000878F0 /* Assets.xcassets */; };
 		E8F89BB92A56800C000878F0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8F89BB82A56800C000878F0 /* Preview Assets.xcassets */; };
+		E8F89BC02A5683A0000878F0 /* CatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F89BBF2A5683A0000878F0 /* CatView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		E8F89BB42A56800C000878F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E8F89BB62A56800C000878F0 /* OpenMind.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OpenMind.entitlements; sourceTree = "<group>"; };
 		E8F89BB82A56800C000878F0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E8F89BBF2A5683A0000878F0 /* CatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				E8F89BAE2A56800A000878F0 /* OpenMindApp.swift */,
 				E8F89BB02A56800A000878F0 /* Item.swift */,
 				E8F89BB22A56800A000878F0 /* ContentView.swift */,
+				E8F89BBF2A5683A0000878F0 /* CatView.swift */,
 				E8F89BB42A56800C000878F0 /* Assets.xcassets */,
 				E8F89BB62A56800C000878F0 /* OpenMind.entitlements */,
 				E8F89BB72A56800C000878F0 /* Preview Content */,
@@ -145,6 +148,7 @@
 				E8F89BB12A56800A000878F0 /* Item.swift in Sources */,
 				E8F89BAF2A56800A000878F0 /* OpenMindApp.swift in Sources */,
 				E8F89BB32A56800A000878F0 /* ContentView.swift in Sources */,
+				E8F89BC02A5683A0000878F0 /* CatView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
