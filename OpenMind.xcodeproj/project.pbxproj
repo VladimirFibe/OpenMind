@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E8C961472A577DE100F0B964 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8C961462A577DE100F0B964 /* Colors.xcassets */; };
 		E8F89BAF2A56800A000878F0 /* OpenMindApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F89BAE2A56800A000878F0 /* OpenMindApp.swift */; };
 		E8F89BB12A56800A000878F0 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F89BB02A56800A000878F0 /* Item.swift */; };
 		E8F89BB32A56800A000878F0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F89BB22A56800A000878F0 /* ContentView.swift */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E8C961452A5774AA00F0B964 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		E8C961462A577DE100F0B964 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		E8F89BAB2A56800A000878F0 /* OpenMind.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenMind.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8F89BAE2A56800A000878F0 /* OpenMindApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenMindApp.swift; sourceTree = "<group>"; };
 		E8F89BB02A56800A000878F0 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
@@ -40,6 +43,7 @@
 		E8F89BA22A56800A000878F0 = {
 			isa = PBXGroup;
 			children = (
+				E8C961452A5774AA00F0B964 /* README.md */,
 				E8F89BAD2A56800A000878F0 /* OpenMind */,
 				E8F89BAC2A56800A000878F0 /* Products */,
 			);
@@ -61,6 +65,7 @@
 				E8F89BB22A56800A000878F0 /* ContentView.swift */,
 				E8F89BBF2A5683A0000878F0 /* CatView.swift */,
 				E8F89BB42A56800C000878F0 /* Assets.xcassets */,
+				E8C961462A577DE100F0B964 /* Colors.xcassets */,
 				E8F89BB62A56800C000878F0 /* OpenMind.entitlements */,
 				E8F89BB72A56800C000878F0 /* Preview Content */,
 			);
@@ -135,6 +140,7 @@
 			files = (
 				E8F89BB92A56800C000878F0 /* Preview Assets.xcassets in Resources */,
 				E8F89BB52A56800C000878F0 /* Assets.xcassets in Resources */,
+				E8C961472A577DE100F0B964 /* Colors.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
