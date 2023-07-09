@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E8A4EDAC2A584A84005A2D31 /* Shapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A4EDAB2A584A84005A2D31 /* Shapes.swift */; };
 		E8C961472A577DE100F0B964 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8C961462A577DE100F0B964 /* Colors.xcassets */; };
 		E8C961492A5786C000F0B964 /* ShapeLessonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C961482A5786C000F0B964 /* ShapeLessonView.swift */; };
 		E8F89BAF2A56800A000878F0 /* OpenMindApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F89BAE2A56800A000878F0 /* OpenMindApp.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E8A4EDAB2A584A84005A2D31 /* Shapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shapes.swift; sourceTree = "<group>"; };
 		E8C961452A5774AA00F0B964 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E8C961462A577DE100F0B964 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		E8C961482A5786C000F0B964 /* ShapeLessonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeLessonView.swift; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 				E8F89BB22A56800A000878F0 /* ContentView.swift */,
 				E8F89BBF2A5683A0000878F0 /* CatView.swift */,
 				E8C961482A5786C000F0B964 /* ShapeLessonView.swift */,
+				E8A4EDAB2A584A84005A2D31 /* Shapes.swift */,
 				E8F89BB42A56800C000878F0 /* Assets.xcassets */,
 				E8C961462A577DE100F0B964 /* Colors.xcassets */,
 				E8F89BB62A56800C000878F0 /* OpenMind.entitlements */,
@@ -159,6 +162,7 @@
 				E8F89BB32A56800A000878F0 /* ContentView.swift in Sources */,
 				E8C961492A5786C000F0B964 /* ShapeLessonView.swift in Sources */,
 				E8F89BC02A5683A0000878F0 /* CatView.swift in Sources */,
+				E8A4EDAC2A584A84005A2D31 /* Shapes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
