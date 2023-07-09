@@ -6,7 +6,7 @@ struct OpenMindApp: App {
 
     var body: some Scene {
         WindowGroup {
-            CatView()
+            BackgroundView().environmentObject(CellStore())
 //ContentView()
         }
 //        .modelContainer(for: Item.self)
