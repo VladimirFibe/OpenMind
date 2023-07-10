@@ -18,9 +18,16 @@ class CellStore: ObservableObject {
         .init(color: .red, text: "Drawing in SwiftUI"),
         .init(color: .green, offset: .init(width: 100, height: 300), text: "Shapes")
     ]
+    
     private func indexOf(cell: Cell) -> Int {
         guard let index = cells.firstIndex(where: { $0.id == cell.id })
         else { fatalError("Cell \(cell) does not exitst")}
         return index
+    }
+    
+    func addCell(offset: CGSize) {
+        let cell = Cell(offset: offset)
+        cells.append(cell)
+        selectedCell = cell
     }
 }
