@@ -27,10 +27,15 @@ struct CellView: View {
                 TimelineView(.animation(minimumInterval: 0.2)) { context in
                     StrokeView(cell: cell, isSelected: isSelected, date: context.date)
                 }
-                TextField("Enter cell text", text: $text)
-                    .padding()
-                    .multilineTextAlignment(.center)
-                    .focused($textFieldIsFocused)
+                if let drawing = cell.drawing {
+                    DrawingView(drawing: drawing, size: cell.size)
+                        .scaleEffect(0.8)
+                } else {
+                    TextField("Enter cell text", text: $text)
+                        .padding()
+                        .multilineTextAlignment(.center)
+                        .focused($textFieldIsFocused)
+                }
             }
             .frame(width: cell.size.width, height: cell.size.height)
             if isSelected {
@@ -83,6 +88,24 @@ extension CellView {
             }
         ]
         return options
+    }
+}
+
+extension CellView {
+    struct DrawingView: View {
+        let drawing: Drawing
+        let size: CGSize
+        var body: some View {
+            let scaleFactor = drawing.size.scaleFactor(toFit: size)
+            Canvas { context, size in
+                context.scaleBy(x: scaleFactor, y: scaleFactor)
+                for path in drawing.paths {
+                    let style = StrokeStyle(lineWidth: 5, lineCap: .round, lineJoin: .round)
+                    context.stroke(path.path, with: .color(path.color), style: style)
+                }
+            }
+            .aspectRatio(drawing.size, contentMode: .fit)
+        }
     }
 }
 

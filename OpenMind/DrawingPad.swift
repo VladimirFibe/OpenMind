@@ -25,7 +25,9 @@ struct DrawingPad: View {
     @State private var paths: [DrawingPath] = []
     let lineWidth = 10.0
     var pickedColor: Color = .black
+    @Binding var savedDrawing: Drawing?
     var body: some View {
+        var drawingSize: CGSize = .zero
         let drag = DragGesture(minimumDistance: 0)
             .onChanged { stroke in
                 livePath.addLine(to: stroke.location, color: pickedColor)
@@ -33,7 +35,11 @@ struct DrawingPad: View {
             }
             .onEnded { stroke in
                 livePath.smoothLine()
-                if !livePath.path.isEmpty { paths.append(livePath)}
+                if !livePath.path.isEmpty {
+                    paths.append(livePath)
+                    savedDrawing?.paths.append(livePath)
+                    savedDrawing?.size = drawingSize
+                }
                 livePath = DrawingPath()
             }
         
@@ -47,7 +53,7 @@ struct DrawingPad: View {
                                style: style)
             }
             
-//            drawingSize = size
+            drawingSize = size
         }
         ZStack {
             Color(.systemBackground)
@@ -56,9 +62,16 @@ struct DrawingPad: View {
                 .gesture(drag)
             livePath.path.stroke(livePath.color, lineWidth: lineWidth)
         }
+        .task {
+            if let savedPaths = savedDrawing?.paths {
+                paths.append(contentsOf: savedPaths)
+            } else {
+                savedDrawing = Drawing(paths: [])
+            }
+        }
     }
 }
 
 #Preview {
-    DrawingPad()
+    DrawingPad(savedDrawing: .constant(nil))
 }

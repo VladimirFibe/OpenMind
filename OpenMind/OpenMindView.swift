@@ -4,7 +4,6 @@ struct OpenMindView: View {
     @EnvironmentObject var cellStore: CellStore
     @EnvironmentObject var modalViews: OpenMindView.ModalViews
     @State private var cellShape = CellShape.roundedRect
-
     var body: some View {
             BackgroundView()
             .onChange(of: cellShape, { _, newShape in

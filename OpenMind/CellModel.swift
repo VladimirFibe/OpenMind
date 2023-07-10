@@ -3,6 +3,10 @@ import SwiftUI
 
 let minCellSize = CGSize(width: 200, height: 100)
 
+struct Drawing: Equatable {
+    var paths: [DrawingPath] = []
+    var size: CGSize = .zero
+}
 struct Cell: Identifiable, Equatable {
     var id = UUID()
     var color = Color(.omViolet)
@@ -10,7 +14,11 @@ struct Cell: Identifiable, Equatable {
     var offset = CGSize.zero
     var shape = CellShape.allCases.randomElement()
     var text = "New Idea!"
+    var drawing: Drawing?
     
+    mutating func update(drawing: Drawing) {
+        self.drawing = drawing
+    }
     mutating func update(shape: CellShape) {
         self.shape = shape
     }
@@ -44,5 +52,10 @@ class CellStore: ObservableObject {
     func updateShape(cell: Cell, shape: CellShape) {
         let index = indexOf(cell: cell)
         cells[index].update(shape: shape)
+    }
+    
+    func updateDrawing(cell: Cell, drawing: Drawing) {
+        let index = indexOf(cell: cell)
+        cells[index].update(drawing: drawing)
     }
 }
