@@ -4,24 +4,27 @@ struct CellView: View {
     let cell: Cell
     @State private var text: String = ""
     @EnvironmentObject var cellStore: CellStore
-    var isSelected: Bool {
-        cell == cellStore.selectedCell
-    }
+    @FocusState var textFieldIsFocused: Bool
+    var isSelected: Bool {  cell == cellStore.selectedCell }
     var body: some View {
         
         ZStack {
             cell.shape?.shape
-                .foregroundStyle(.white)
+                .foregroundStyle(Color(.systemBackground))
             TimelineView(.animation(minimumInterval: 0.2)) { context in
                 StrokeView(cell: cell, isSelected: isSelected, date: context.date)
             }
             TextField("Enter cell text", text: $text)
                 .padding()
                 .multilineTextAlignment(.center)
+                .focused($textFieldIsFocused)
         }
         .frame(width: cell.size.width, height: cell.size.height)
         .offset(cell.offset)
         .onAppear { text = cell.text}
+        .onChange(of: isSelected, { oldValue, newValue in
+            if !newValue { textFieldIsFocused = false }
+        })
         .onTapGesture { cellStore.selectedCell = cell }
     }
 }
