@@ -26,7 +26,7 @@ struct AnyShape: Shape {
         path(rect)
     }
         
-    private let path: @Sendable (CGRect) -> Path
+    private let path: (CGRect) -> Path
     
     init<T: Shape>(_ shape: T) {
         path = { shape.path(in: $0)}
