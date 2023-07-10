@@ -3,11 +3,20 @@ import SwiftUI
 struct CellView: View {
     let cell: Cell
     @State private var text: String = ""
+    @State private var offset: CGSize = .zero
+    @State private var currentOffset: CGSize = .zero
     @EnvironmentObject var cellStore: CellStore
     @FocusState var textFieldIsFocused: Bool
     var isSelected: Bool {  cell == cellStore.selectedCell }
     var body: some View {
-        
+        let drag = DragGesture()
+            .onChanged { drag in
+                offset = currentOffset + drag.translation
+            }
+            .onEnded { drag in
+                offset = currentOffset + drag.translation
+                currentOffset = offset
+            }
         ZStack {
             cell.shape?.shape
                 .foregroundStyle(Color(.systemBackground))
@@ -20,12 +29,13 @@ struct CellView: View {
                 .focused($textFieldIsFocused)
         }
         .frame(width: cell.size.width, height: cell.size.height)
-        .offset(cell.offset)
+        .offset(cell.offset + offset)
         .onAppear { text = cell.text}
         .onChange(of: isSelected, { oldValue, newValue in
             if !newValue { textFieldIsFocused = false }
         })
         .onTapGesture { cellStore.selectedCell = cell }
+        .simultaneousGesture(drag)
     }
 }
 

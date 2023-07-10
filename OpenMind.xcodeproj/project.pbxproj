@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E8A4EDAC2A584A84005A2D31 /* Shapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A4EDAB2A584A84005A2D31 /* Shapes.swift */; };
+		E8AF797D2A5BB0B200FBACC2 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8AF797C2A5BB0B200FBACC2 /* Extensions.swift */; };
 		E8C961472A577DE100F0B964 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8C961462A577DE100F0B964 /* Colors.xcassets */; };
 		E8C961492A5786C000F0B964 /* ShapeLessonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C961482A5786C000F0B964 /* ShapeLessonView.swift */; };
 		E8E13D1E2A5AFE9F002125D4 /* CellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E13D1D2A5AFE9F002125D4 /* CellModel.swift */; };
@@ -23,6 +24,7 @@
 
 /* Begin PBXFileReference section */
 		E8A4EDAB2A584A84005A2D31 /* Shapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shapes.swift; sourceTree = "<group>"; };
+		E8AF797C2A5BB0B200FBACC2 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		E8C961452A5774AA00F0B964 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E8C961462A577DE100F0B964 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		E8C961482A5786C000F0B964 /* ShapeLessonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeLessonView.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 				E8E13D1D2A5AFE9F002125D4 /* CellModel.swift */,
 				E8E13D1F2A5B0084002125D4 /* CellView.swift */,
 				E8E13D212A5B0351002125D4 /* BackgroundView.swift */,
+				E8AF797C2A5BB0B200FBACC2 /* Extensions.swift */,
 				E8F89BB42A56800C000878F0 /* Assets.xcassets */,
 				E8C961462A577DE100F0B964 /* Colors.xcassets */,
 				E8F89BB62A56800C000878F0 /* OpenMind.entitlements */,
@@ -171,6 +174,7 @@
 				E8F89BAF2A56800A000878F0 /* OpenMindApp.swift in Sources */,
 				E8F89BB32A56800A000878F0 /* ContentView.swift in Sources */,
 				E8C961492A5786C000F0B964 /* ShapeLessonView.swift in Sources */,
+				E8AF797D2A5BB0B200FBACC2 /* Extensions.swift in Sources */,
 				E8E13D202A5B0084002125D4 /* CellView.swift in Sources */,
 				E8E13D1E2A5AFE9F002125D4 /* CellModel.swift in Sources */,
 				E8F89BC02A5683A0000878F0 /* CatView.swift in Sources */,
