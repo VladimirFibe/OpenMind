@@ -12,8 +12,13 @@
 		E8AF79822A5BBC4100FBACC2 /* ColorSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8AF79812A5BBC4100FBACC2 /* ColorSlider.swift */; };
 		E8AF79842A5BC6B300FBACC2 /* OpenMindView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8AF79832A5BC6B300FBACC2 /* OpenMindView.swift */; };
 		E8AF79862A5BD0D700FBACC2 /* ColorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8AF79852A5BD0D700FBACC2 /* ColorPicker.swift */; };
+		E8AF79882A5BE7FC00FBACC2 /* FlyoutMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8AF79872A5BE7FC00FBACC2 /* FlyoutMenu.swift */; };
+		E8AF798B2A5BF14300FBACC2 /* Algorithms in Frameworks */ = {isa = PBXBuildFile; productRef = E8AF798A2A5BF14300FBACC2 /* Algorithms */; };
+		E8AF798D2A5C124E00FBACC2 /* PathExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8AF798C2A5C124E00FBACC2 /* PathExtensions.swift */; };
+		E8AF798F2A5C148400FBACC2 /* DrawingPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8AF798E2A5C148400FBACC2 /* DrawingPad.swift */; };
+		E8AF79912A5C20E900FBACC2 /* DrawingPadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8AF79902A5C20E900FBACC2 /* DrawingPadView.swift */; };
 		E8C961472A577DE100F0B964 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8C961462A577DE100F0B964 /* Colors.xcassets */; };
-		E8C961492A5786C000F0B964 /* ShapeLessonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C961482A5786C000F0B964 /* ShapeLessonView.swift */; };
+		E8C961492A5786C000F0B964 /* ShapeSelectionGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C961482A5786C000F0B964 /* ShapeSelectionGrid.swift */; };
 		E8E13D1E2A5AFE9F002125D4 /* CellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E13D1D2A5AFE9F002125D4 /* CellModel.swift */; };
 		E8E13D202A5B0084002125D4 /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E13D1F2A5B0084002125D4 /* CellView.swift */; };
 		E8E13D222A5B0351002125D4 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E13D212A5B0351002125D4 /* BackgroundView.swift */; };
@@ -31,9 +36,13 @@
 		E8AF79812A5BBC4100FBACC2 /* ColorSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSlider.swift; sourceTree = "<group>"; };
 		E8AF79832A5BC6B300FBACC2 /* OpenMindView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenMindView.swift; sourceTree = "<group>"; };
 		E8AF79852A5BD0D700FBACC2 /* ColorPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPicker.swift; sourceTree = "<group>"; };
+		E8AF79872A5BE7FC00FBACC2 /* FlyoutMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlyoutMenu.swift; sourceTree = "<group>"; };
+		E8AF798C2A5C124E00FBACC2 /* PathExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PathExtensions.swift; sourceTree = "<group>"; };
+		E8AF798E2A5C148400FBACC2 /* DrawingPad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingPad.swift; sourceTree = "<group>"; };
+		E8AF79902A5C20E900FBACC2 /* DrawingPadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingPadView.swift; sourceTree = "<group>"; };
 		E8C961452A5774AA00F0B964 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E8C961462A577DE100F0B964 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
-		E8C961482A5786C000F0B964 /* ShapeLessonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeLessonView.swift; sourceTree = "<group>"; };
+		E8C961482A5786C000F0B964 /* ShapeSelectionGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeSelectionGrid.swift; sourceTree = "<group>"; };
 		E8E13D1D2A5AFE9F002125D4 /* CellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellModel.swift; sourceTree = "<group>"; };
 		E8E13D1F2A5B0084002125D4 /* CellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
 		E8E13D212A5B0351002125D4 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
@@ -52,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8AF798B2A5BF14300FBACC2 /* Algorithms in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +81,7 @@
 			children = (
 				E8AF79812A5BBC4100FBACC2 /* ColorSlider.swift */,
 				E8AF79852A5BD0D700FBACC2 /* ColorPicker.swift */,
+				E8AF79872A5BE7FC00FBACC2 /* FlyoutMenu.swift */,
 			);
 			path = Controls;
 			sourceTree = "<group>";
@@ -113,11 +124,14 @@
 				E8AF797E2A5BBB9700FBACC2 /* App */,
 				E8F89BBF2A5683A0000878F0 /* CatView.swift */,
 				E8AF79832A5BC6B300FBACC2 /* OpenMindView.swift */,
-				E8C961482A5786C000F0B964 /* ShapeLessonView.swift */,
+				E8C961482A5786C000F0B964 /* ShapeSelectionGrid.swift */,
 				E8A4EDAB2A584A84005A2D31 /* Shapes.swift */,
 				E8E13D1D2A5AFE9F002125D4 /* CellModel.swift */,
 				E8E13D1F2A5B0084002125D4 /* CellView.swift */,
 				E8E13D212A5B0351002125D4 /* BackgroundView.swift */,
+				E8AF798E2A5C148400FBACC2 /* DrawingPad.swift */,
+				E8AF79902A5C20E900FBACC2 /* DrawingPadView.swift */,
+				E8AF798C2A5C124E00FBACC2 /* PathExtensions.swift */,
 				E8AF797C2A5BB0B200FBACC2 /* Extensions.swift */,
 			);
 			path = OpenMind;
@@ -147,6 +161,9 @@
 			dependencies = (
 			);
 			name = OpenMind;
+			packageProductDependencies = (
+				E8AF798A2A5BF14300FBACC2 /* Algorithms */,
+			);
 			productName = OpenMind;
 			productReference = E8F89BAB2A56800A000878F0 /* OpenMind.app */;
 			productType = "com.apple.product-type.application";
@@ -175,6 +192,9 @@
 				Base,
 			);
 			mainGroup = E8F89BA22A56800A000878F0;
+			packageReferences = (
+				E8AF79892A5BF14300FBACC2 /* XCRemoteSwiftPackageReference "swift-algorithms" */,
+			);
 			productRefGroup = E8F89BAC2A56800A000878F0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -202,19 +222,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8AF79912A5C20E900FBACC2 /* DrawingPadView.swift in Sources */,
 				E8AF79822A5BBC4100FBACC2 /* ColorSlider.swift in Sources */,
+				E8AF798D2A5C124E00FBACC2 /* PathExtensions.swift in Sources */,
 				E8AF79862A5BD0D700FBACC2 /* ColorPicker.swift in Sources */,
 				E8E13D222A5B0351002125D4 /* BackgroundView.swift in Sources */,
 				E8F89BB12A56800A000878F0 /* Item.swift in Sources */,
 				E8F89BAF2A56800A000878F0 /* OpenMindApp.swift in Sources */,
 				E8F89BB32A56800A000878F0 /* ContentView.swift in Sources */,
-				E8C961492A5786C000F0B964 /* ShapeLessonView.swift in Sources */,
+				E8C961492A5786C000F0B964 /* ShapeSelectionGrid.swift in Sources */,
 				E8AF79842A5BC6B300FBACC2 /* OpenMindView.swift in Sources */,
 				E8AF797D2A5BB0B200FBACC2 /* Extensions.swift in Sources */,
 				E8E13D202A5B0084002125D4 /* CellView.swift in Sources */,
 				E8E13D1E2A5AFE9F002125D4 /* CellModel.swift in Sources */,
+				E8AF798F2A5C148400FBACC2 /* DrawingPad.swift in Sources */,
 				E8F89BC02A5683A0000878F0 /* CatView.swift in Sources */,
 				E8A4EDAC2A584A84005A2D31 /* Shapes.swift in Sources */,
+				E8AF79882A5BE7FC00FBACC2 /* FlyoutMenu.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,6 +457,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E8AF79892A5BF14300FBACC2 /* XCRemoteSwiftPackageReference "swift-algorithms" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-algorithms.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E8AF798A2A5BF14300FBACC2 /* Algorithms */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E8AF79892A5BF14300FBACC2 /* XCRemoteSwiftPackageReference "swift-algorithms" */;
+			productName = Algorithms;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E8F89BA32A56800A000878F0 /* Project object */;
 }

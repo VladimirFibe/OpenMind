@@ -1,7 +1,8 @@
 import SwiftUI
 
-struct ShapeLessonView: View {
-    
+struct ShapeSelectionGrid: View {
+    @Binding var selectedCellShape: CellShape
+    @Environment(\.dismiss) var dismiss
     var body: some View {
         let columns: [GridItem] = Array(repeating: .init(.flexible(), spacing: 20), count: 2)
         LazyVGrid(columns: columns, spacing: 20.0) {
@@ -14,6 +15,10 @@ struct ShapeLessonView: View {
                             .foregroundStyle(.accent)
                     }
                     .aspectRatio(2, contentMode: .fit)
+                    .onTapGesture {
+                        selectedCellShape = cell
+                        dismiss()
+                    }
             }
         }
         .padding()
@@ -21,5 +26,5 @@ struct ShapeLessonView: View {
 }
 
 #Preview {
-    ShapeLessonView()
+    ShapeSelectionGrid(selectedCellShape: .constant(.heart))
 }

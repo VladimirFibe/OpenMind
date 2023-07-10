@@ -10,6 +10,10 @@ struct Cell: Identifiable, Equatable {
     var offset = CGSize.zero
     var shape = CellShape.allCases.randomElement()
     var text = "New Idea!"
+    
+    mutating func update(shape: CellShape) {
+        self.shape = shape
+    }
 }
 
 class CellStore: ObservableObject {
@@ -29,5 +33,16 @@ class CellStore: ObservableObject {
         let cell = Cell(offset: offset)
         cells.append(cell)
         selectedCell = cell
+    }
+    
+    func delete(_ cell: Cell?) {
+        guard let cell else { return }
+        if selectedCell == cell { selectedCell = nil }
+        cells.removeAll { $0.id == cell.id }
+    }
+    
+    func updateShape(cell: Cell, shape: CellShape) {
+        let index = indexOf(cell: cell)
+        cells[index].update(shape: shape)
     }
 }

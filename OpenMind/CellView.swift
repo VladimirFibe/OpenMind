@@ -1,14 +1,17 @@
 import SwiftUI
 
 struct CellView: View {
+    
     let cell: Cell
     @State private var text: String = ""
     @State private var offset: CGSize = .zero
     @State private var currentOffset: CGSize = .zero
     @EnvironmentObject var cellStore: CellStore
+    @EnvironmentObject var modalViews: OpenMindView.ModalViews
     @FocusState var textFieldIsFocused: Bool
     var isSelected: Bool {  cell == cellStore.selectedCell }
     var body: some View {
+        let flyoutMenu = FlyoutMenu(options: setupOptions())
         let drag = DragGesture()
             .onChanged { drag in
                 offset = currentOffset + drag.translation
@@ -18,17 +21,23 @@ struct CellView: View {
                 currentOffset = offset
             }
         ZStack {
-            cell.shape?.shape
-                .foregroundStyle(Color(.systemBackground))
-            TimelineView(.animation(minimumInterval: 0.2)) { context in
-                StrokeView(cell: cell, isSelected: isSelected, date: context.date)
+            ZStack {
+                cell.shape?.shape
+                    .foregroundStyle(Color(.systemBackground))
+                TimelineView(.animation(minimumInterval: 0.2)) { context in
+                    StrokeView(cell: cell, isSelected: isSelected, date: context.date)
+                }
+                TextField("Enter cell text", text: $text)
+                    .padding()
+                    .multilineTextAlignment(.center)
+                    .focused($textFieldIsFocused)
             }
-            TextField("Enter cell text", text: $text)
-                .padding()
-                .multilineTextAlignment(.center)
-                .focused($textFieldIsFocused)
+            .frame(width: cell.size.width, height: cell.size.height)
+            if isSelected {
+                flyoutMenu
+                    .offset(x: cell.size.width / 2, y: -cell.size.height / 2)
+            }
         }
-        .frame(width: cell.size.width, height: cell.size.height)
         .offset(cell.offset + offset)
         .onAppear { text = cell.text}
         .onChange(of: isSelected, { oldValue, newValue in
@@ -59,8 +68,27 @@ extension CellView {
     }
 }
 
+extension CellView {
+    func setupOptions() -> [FlyoutMenu.Option] {
+        let options: [FlyoutMenu.Option] = [
+            .init(image: Image(systemName: "trash"), color: .omRed) {
+                cellStore.delete(cell)
+            },
+            .init(image: Image(systemName: "square.on.circle"), color: .green) {
+                modalViews.showShapes.toggle()
+            },
+            .init(image: Image(systemName: "link"), color: .purple) {},
+            .init(image: Image("crayon"), color: .orange) {
+                modalViews.showDrawingPad.toggle()
+            }
+        ]
+        return options
+    }
+}
+
 #Preview {
     CellView(cell: Cell())
         .environmentObject(CellStore())
+        .environmentObject(OpenMindView.ModalViews())
         .padding()
 }
